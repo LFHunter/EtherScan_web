@@ -18,9 +18,10 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
         description="Script that accept 'block','method',")
-    parser.add_argument("--block", type=str, help="Block_range ,must ")
+    parser.add_argument("--block", type=str, required=True,
+                        help="Block_range ,must ")
     parser.add_argument("--method", default="", type=str, help="Method")
-    parser.add_argument("--amount", type=str, default="", help="Amount")
+    parser.add_argument("--amount", default="", type=str,  help="Amount")
 
     args = parser.parse_args()
 
